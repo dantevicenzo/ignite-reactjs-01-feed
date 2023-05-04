@@ -21,6 +21,10 @@
     margin-left: 1rem;
 }
 
+.content {
+    margin-top: 1rem;
+}
+
 .commentBox {
     background-color: var(--gray8);
     border-radius: 8px;

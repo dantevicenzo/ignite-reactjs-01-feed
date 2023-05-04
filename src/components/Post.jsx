@@ -40,9 +40,24 @@ export function Post({author, job, content}){
                 </div>
             </form>
 
-            <Comment></Comment>
-            <Comment></Comment>
-            <Comment></Comment>
+            <Comment 
+                author={{name: "Dante Vicenzo", avatarUrl: "https://github.com/dantevicenzo.png"}}
+                time="Cerca de 2h"
+                content="Muito bom Dante, parabéns!! 👏👏"
+                applauseCount={33}
+            />
+            <Comment 
+                author={{name: "Dante Vicenzo", avatarUrl: "https://github.com/dantevicenzo.png"}}
+                time="Cerca de 2h"
+                content="Muito bom Dante, parabéns!! 👏👏"
+                applauseCount={33}
+            />
+            <Comment 
+                author={{name: "Dante Vicenzo", avatarUrl: "https://github.com/dantevicenzo.png"}}
+                time="Cerca de 2h"
+                content="Muito bom Dante, parabéns!! 👏👏"
+                applauseCount={33}
+            />
         </article>
     )
 }
