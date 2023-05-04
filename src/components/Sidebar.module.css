@@ -61,7 +61,7 @@
     gap: 0.625rem;
 }
 
-.editProfile > button:hover {
+.sidebar > footer > button:hover {
     background-color: var(--green);
     border: var(--green) 1px solid;
     color: var(--white);
