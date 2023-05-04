@@ -14,9 +14,9 @@ export function Sidebar(){
                 <span>React Developer</span>
             </div>
 
-            <div className={styles.editProfile}>
+            <footer>
                 <button><PencilLine size={20} />Editar seu perfil</button>
-            </div>
+            </footer>
         </aside>
     )
 }

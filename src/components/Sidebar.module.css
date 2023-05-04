@@ -38,7 +38,7 @@
     font-size: 0;
 }
 
-.editProfile {
+.sidebar > footer {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
@@ -49,7 +49,7 @@
     justify-content: center;
 }
 
-.editProfile > button {
+.sidebar > footer > button {
     padding: 1rem 1.5rem;
     border-radius: 8px;
     background-color: transparent;
