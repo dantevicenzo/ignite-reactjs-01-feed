@@ -1,4 +1,4 @@
-aside {
+.sidebar {
     overflow: hidden;
     background-color: var(--gray2);
     border-radius: 8px;
