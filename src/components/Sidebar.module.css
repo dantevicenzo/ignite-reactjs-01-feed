@@ -26,22 +26,17 @@
 }
 
 .avatar {
+    box-sizing: initial;
+    width: 3.125rem;
     height: 3.125rem;
     border-radius: 8px;
+    border: var(--gray2) solid 4px;
     outline: var(--green-light) solid 2px;
-    outline-offset: 4px;
-}
-
-.avatarBox {
-    outline: var(--gray2) solid 4px;
-    border-radius: 8px;
-    font-size: 0;
 }
 
 .sidebar > footer {
     margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
+    padding: 1.5rem 2rem 2rem;
     border-top: 1px solid var(--gray3);
     align-items: center;
 
@@ -55,10 +50,11 @@
     background-color: transparent;
     border: var(--green-light) 1px solid;
     color: var(--green-light);
+    font-weight: bold;
 
     display: flex;
     align-items: center;
-    gap: 0.625rem;
+    gap: 0.5rem;
 }
 
 .sidebar > footer > button:hover {
