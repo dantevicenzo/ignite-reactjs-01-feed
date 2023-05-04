@@ -1,0 +1,81 @@
+.commentWrapper {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.commentWrapper + .commentWrapper {
+    margin-top: 1.5rem;
+}
+
+.avatar {
+    box-sizing: initial;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 8px;
+    /* border: var(--gray2) solid 4px;
+    outline: var(--green-light) solid 2px; */
+}
+
+.comment {
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.commentBox {
+    background-color: var(--gray8);
+    border-radius: 8px;
+    padding: 1rem 1rem 1.563rem;
+    margin-bottom: 1rem;
+}
+
+.infoWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete:hover {
+    cursor: pointer;
+    color: var(--red-danger);
+}
+
+.info > strong {
+    font-size: 0.875rem;
+    font-weight: bold;
+    display: block;
+}
+
+.info > time {
+    font-size: 0.75rem;
+    color: var(--gray5);
+    display: block;
+}
+
+.applause {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: var(--gray5);
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.applause:hover {
+    color: var(--gray7);
+    cursor: pointer;
+}
+
+.applause:active,
+.applause:visited
+{
+    color: var(--green-light);
+}
+
+.applause > svg {
+    margin-right: 0.625rem;
+}
+
+.applauseCount::before {
+    content: '\2022';
+    margin: 0 0.25rem;
+}

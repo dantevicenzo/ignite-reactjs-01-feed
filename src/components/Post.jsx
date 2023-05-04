@@ -1,3 +1,4 @@
+import { Comment } from './Comment'
 import styles from './Post.module.css'
 
 export function Post({author, job, content}){
@@ -38,6 +39,10 @@ export function Post({author, job, content}){
                     <button>Publicar</button>
                 </div>
             </form>
+
+            <Comment></Comment>
+            <Comment></Comment>
+            <Comment></Comment>
         </article>
     )
 }
