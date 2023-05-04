@@ -44,7 +44,7 @@
     height: 3.125rem;
     border-radius: 8px;
     border: var(--gray2) solid 4px;
-    outline: var(--green-light) solid 2px;
+    box-shadow: 0 0 0 2px var(--green-light);
 }
 
 .content {
