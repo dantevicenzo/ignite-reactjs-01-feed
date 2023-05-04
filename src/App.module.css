@@ -9,3 +9,21 @@
 
     align-items: flex-start;
 }
+
+@media (max-width: 768px) {
+	.wrapper {
+        grid-template-columns: 1fr;
+    }
+    html {
+        font-size: 85%;
+    }
+}
+
+@media (max-width: 425px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+    html {
+        font-size: 69%;
+    }
+}
