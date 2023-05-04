@@ -1,0 +1,69 @@
+aside {
+    overflow: hidden;
+    background-color: var(--gray2);
+    border-radius: 8px;
+}
+
+.cover {
+    object-fit: cover;
+    width: 100%;
+    height: 4.5rem;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -1.563rem;
+}
+
+.userInfo strong {
+    margin-top: 1rem;
+}
+
+.userInfo span {
+    color: var(--gray5);
+}
+
+.avatar {
+    height: 3.125rem;
+    border-radius: 8px;
+    outline: var(--green-light) solid 2px;
+    outline-offset: 4px;
+}
+
+.avatarBox {
+    outline: var(--gray2) solid 4px;
+    border-radius: 8px;
+    font-size: 0;
+}
+
+.editProfile {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid var(--gray3);
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+}
+
+.editProfile > button {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    background-color: transparent;
+    border: var(--green-light) 1px solid;
+    color: var(--green-light);
+
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.editProfile > button:hover {
+    background-color: var(--green);
+    border: var(--green) 1px solid;
+    color: var(--white);
+    cursor: pointer;
+}
