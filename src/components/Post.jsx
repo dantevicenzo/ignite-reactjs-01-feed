@@ -4,17 +4,17 @@ export function Post({author, job, content}){
     return (
         <article className={styles.post}>
             <header>
-                <div className={styles.authorInfo}>
+                <div className={styles.author}>
                     <img 
                             className={styles.avatar} 
                             src='https://github.com/dantevicenzo.png' 
                     />
-                    <div>
+                    <div className={styles.authorInfo}>
                         <strong>{author}</strong>
                         <span>{job}</span>
                     </div>
                 </div>
-                <time>Publicado há 1h</time>
+                <time title='04 de Maio às 14:07' dateTime='04-05-2023 14:07:00'>Publicado há 1h</time>
             </header>
 
             <div className={styles.content}>
@@ -28,13 +28,16 @@ export function Post({author, job, content}){
                 <br />
             </div>
             
-            <footer>
+            <form className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
                 <textarea placeholder='Escreva um comentário...'>
 
                 </textarea>
-                <button>Publicar</button>
-            </footer>
+
+                <div className={styles.commentFormButton}>
+                    <button>Publicar</button>
+                </div>
+            </form>
         </article>
     )
 }

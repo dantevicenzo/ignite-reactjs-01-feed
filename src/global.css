@@ -32,8 +32,8 @@ body {
     color: var(--gray7);
 }
 
-*:focus {
-    outline: 1px solid var(--green);
+:focus {
+    outline: 2px solid var(--green);
 }
 
 button:active {
