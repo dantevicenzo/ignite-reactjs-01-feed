@@ -17,7 +17,10 @@ function App() {
         <main>
           <Post 
             author="Dante Vicenzo" 
-            content="Lorem ipsum dolor sit amet, consectetur adipis occ tempor inv"
+            job="React Developer"
+            content={`Fala galeraa 👋
+
+Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀`}
           />
           <Post 
             author="Dante Vicenzo" 

@@ -31,3 +31,7 @@ body {
     background-color: var(--gray1);
     color: var(--gray7);
 }
+
+*:focus {
+    outline: 1px solid var(--green);
+}
