@@ -15,6 +15,7 @@
 
 .post header time {
     color: var(--gray5);
+    font-size: 0.875rem;
 }
 
 .authorInfo {
@@ -33,6 +34,7 @@
 .authorInfo span {
     display: block;
     color: var(--gray5);
+    font-size: 0.875rem;
 }
 
 .avatar {
@@ -47,6 +49,7 @@
 .content {
     white-space: pre-wrap;
     margin-top: 1.5rem;
+    color: var(--gray6);
 }
 
 .content a {
@@ -76,6 +79,10 @@
     color: var(--gray6);
 }
 
+/* .post footer textarea:focus + button {
+    display: block;
+} */
+
 .post footer button {
     align-self: flex-start;
     padding: 1rem 1.5rem 0.875rem;
@@ -84,4 +91,12 @@
     color: var(--white);
     border: none;
     font-weight: bold;
+
+    /* display: none; */
+    transition: background-color 0.15s;
+}
+
+.post footer button:hover {
+    background-color: var(--green-light);
+    cursor: pointer;
 }
