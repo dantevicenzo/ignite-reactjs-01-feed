@@ -10,22 +10,24 @@ export function Comment({author, time, content, applauseCount}){
             />
             <div className={styles.comment}>
                 <div className={styles.commentBox}>
-                    <div className={styles.infoWrapper}>
+                    <header>
                         <div className={styles.info}>
                             <strong>{author.name}</strong>
                             <time title='04 de maio de 2023 às 15:29' dateTime='04-05-2023 15:29:00'>{time}</time>
                         </div>
-                        <a className={styles.delete}><Trash size={24} /></a>
-                    </div>
+                        <button className={styles.delete}><Trash size={24} /></button>
+                    </header>
 
                     <div className={styles.content}>
                         {content}
                     </div>
                 </div>
-                <a className={styles.applause}>
-                    <ThumbsUp size={20} />
-                    <span>Aplaudir</span><span className={styles.applauseCount}>{applauseCount}</span>
-                </a>
+                <footer>
+                    <button className={styles.applause}>
+                        <ThumbsUp size={20} />
+                        <span>Aplaudir</span><span className={styles.applauseCount}>{applauseCount}</span>
+                    </button>
+                </footer>
             </div>
         </div>
     )

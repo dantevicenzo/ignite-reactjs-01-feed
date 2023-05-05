@@ -32,9 +32,18 @@
     margin-bottom: 1rem;
 }
 
-.infoWrapper {
+.commentBox header {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
+}
+
+.delete {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    line-height: 0;
+    color: var(--gray5);
 }
 
 .delete:hover {
@@ -57,11 +66,13 @@
 .applause {
     background-color: transparent;
     border: none;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     color: var(--gray5);
     font-size: 0.875rem;
     font-weight: bold;
+    line-height: 0;
 }
 
 .applause:hover {
