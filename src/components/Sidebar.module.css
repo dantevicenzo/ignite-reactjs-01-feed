@@ -27,15 +27,6 @@
     font-size: 0.875rem;
 }
 
-.avatar {
-    box-sizing: initial;
-    width: 3.125rem;
-    height: 3.125rem;
-    border-radius: 8px;
-    border: var(--gray2) solid 4px;
-    box-shadow: 0 0 0 2px var(--green-light);
-}
-
 .sidebar > footer {
     margin-top: 1.5rem;
     padding: 1.5rem 2rem 2rem;
