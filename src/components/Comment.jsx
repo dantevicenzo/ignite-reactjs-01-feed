@@ -1,8 +1,18 @@
 import { Avatar } from './Avatar'
 import styles from './Comment.module.css'
 import { Trash, ThumbsUp } from '@phosphor-icons/react'
+import { format, formatDistanceToNow } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 export function Comment({comment, onDeleteComment}){
+
+    const commentDateFormatted = capitalizeFirstLetter(formatDistanceToNow(comment.createdAt, {locale: ptBR}));
+    const commentDateHumanReadable = format(comment.createdAt, "dd 'de' MMMM 'às' HH:mm", {locale: ptBR});
+    const commentDateTime = format(comment.createdAt, "dd-MM-yyyy HH:mm:ss", {locale: ptBR});
 
     function handleDeleteComment(event){
         onDeleteComment(comment);
@@ -16,7 +26,7 @@ export function Comment({comment, onDeleteComment}){
                     <header>
                         <div className={styles.info}>
                             <strong>{comment.commentAuthor.name}</strong>
-                            <time title='04 de maio de 2023 às 15:29' dateTime='04-05-2023 15:29:00'>{comment.commentedAt}</time>
+                            <time title={commentDateHumanReadable} dateTime={commentDateTime}>{commentDateFormatted}</time>
                         </div>
                         <button className={styles.delete} onClick={handleDeleteComment}><Trash size={24} /></button>
                     </header>

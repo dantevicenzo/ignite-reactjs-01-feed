@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import DOMPurify from 'dompurify';
+import { format, formatDistanceToNow } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 
 import { Comment } from './Comment'
 import { Avatar } from './Avatar'
@@ -24,7 +26,7 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
                 name: userLoggedIn.name, 
                 avatarUrl: userLoggedIn.avatarUrl,
             },
-            createdAt: "Cerca de 2h",
+            createdAt: new Date(),
             content: newCommentText,
             applauseCount: 0
         }
@@ -62,6 +64,10 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
     const isTextareaEmpty = newCommentText.length == 0;
     console.log(isTextareaEmpty);
 
+    const publishedDateFormatted = `Publicado ${formatDistanceToNow(createdAt, {locale: ptBR, addSuffix: true})}`;
+    const publishedDateHumanReadable = format(createdAt, "dd 'de' MMMM 'às' HH:mm", {locale: ptBR});
+    const publishedDateTime = format(createdAt, "dd-MM-yyyy HH:mm:ss", {locale: ptBR});
+
     return (
         <article className={styles.post}>
             <header>
@@ -72,7 +78,7 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
                         <span>{author.jobTitle}</span>
                     </div>
                 </div>
-                <time title='04 de Maio às 14:07' dateTime='04-05-2023 14:07:00'>{createdAt}</time>
+                <time title={publishedDateHumanReadable} dateTime={publishedDateTime}>{publishedDateFormatted}</time>
             </header>
 
             <div className={styles.content} dangerouslySetInnerHTML={{ __html: sanitizedContentHTML }} />
