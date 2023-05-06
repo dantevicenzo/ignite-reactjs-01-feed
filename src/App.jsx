@@ -1,3 +1,4 @@
+import React, { createContext, useContext } from 'react';
 import { Header } from './components/Header'
 import './global.css'
 import styles from './App.module.css'
@@ -6,30 +7,104 @@ import { Sidebar } from './components/Sidebar'
 
 function App() {
 
+  const userLoggedIn = {
+    name: "Dante Vicenzo",
+    avatarUrl: "https://github.com/dantevicenzo.png",
+    jobTitle: "React Developer",
+    coverUrl: "https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=50"
+  }
+  
+  const defaultComments = [
+    {
+      id: 1,
+      commentAuthor: {
+          name: "Chris Jatta", 
+          avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/0.jpg",
+      },
+      createdAt: "Cerca de 2h",
+      content: "Muito bom Dante, parabéns!! 👏👏",
+      applauseCount: 3
+    },
+    {
+      id: 2,
+      commentAuthor: {
+          name: "Jed Alic", 
+          avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/65.jpg",
+      },
+      createdAt: "Cerca de 2h",
+      content: "Adorei seu novo portifólio Dante!",
+      applauseCount: 33
+    },
+    {
+      id: 3,
+      commentAuthor: {
+          name: "Zack Verkamp", 
+          avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/76.jpg",
+      },
+      createdAt: "Cerca de 2h",
+      content: "💜💜",
+      applauseCount: 9
+    },
+  ]
+
+  const posts = [
+    {
+      id: 1,
+      author: {
+        name: 'Dante Vicenzo',
+        jobTitle: 'React Developer',
+        avatarUrl: 'https://github.com/dantevicenzo.png'
+      },
+      content: `Fala galeraa 👋
+
+Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
+      
+👉 dante.design/doctorcare
+      
+#novoprojeto #nlw #rocketseat`,
+      createdAt: '2021-01-01T00:00:00.000Z',
+      comments: []
+    },
+    {
+      id: 2,
+      author: {
+        name: 'Dante Vicenzo',
+        jobTitle: 'React Developer',
+        avatarUrl: 'https://github.com/dantevicenzo.png'
+      },
+      content: `Fala pessoal 👋
+
+Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o design e codar na unha, mas consegui 💪🏻 
+      
+Acesse e deixe seu feedback 👉 dantevicenzo.design
+      
+#uiux #userexperience`,
+      createdAt: '2021-01-01T00:00:00.000Z',
+      comments: defaultComments
+    }
+  ]
+
+  
+
   return (
     <div>
       <Header />
 
       <div className={styles.wrapper}>
         
-        <Sidebar />
+        <Sidebar userLoggedIn={userLoggedIn} />
 
         <main>
-          <Post 
-            author="Dante Vicenzo" 
-            job="React Developer"
-            content={`Fala galeraa 👋
-
-Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀`}
-          />
-          <Post 
-            author="Dante Vicenzo" 
-            content="Lorem ipsum dolor sit amet, consectetur adipis occ tempor inv"
-          />
-          <Post 
-            author="Dante Vicenzo" 
-            content="Lorem ipsum dolor sit amet, consectetur adipis occ tempor inv"
-          />
+          {posts.map(post => (
+            <Post 
+              key={post.id} 
+              author={post.author} 
+              content={post.content} 
+              createdAt={"Públicado há 2h"} 
+              comments={post.comments}
+              userLoggedIn={userLoggedIn}
+            />
+          ))}
         </main>
         
       </div>
