@@ -29,7 +29,8 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
             applauseCount: 0
         }
 
-        setCommentList([...commentList, newComment]);        
+        setCommentList([...commentList, newComment]);     
+        setNewCommentText('');   
 
         event.preventDefault();
     }
@@ -58,6 +59,8 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
     
     const formattedContentHTML = formatContentUrls(content);
     const sanitizedContentHTML = DOMPurify.sanitize(formattedContentHTML);
+    const isTextareaEmpty = newCommentText.length == 0;
+    console.log(isTextareaEmpty);
 
     return (
         <article className={styles.post}>
@@ -80,10 +83,11 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
                     placeholder='Escreva um comentário...'
                     value={newCommentText}
                     onChange={handleNewCommentTextChange}
+                    required
                 />
 
                 <div className={styles.commentFormButton}>
-                    <button>Publicar</button>
+                    <button disabled={isTextareaEmpty}>Publicar</button>
                 </div>
             </form>
 
