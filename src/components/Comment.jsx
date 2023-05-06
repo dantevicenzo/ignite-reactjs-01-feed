@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Avatar } from './Avatar'
 import styles from './Comment.module.css'
 import { Trash, ThumbsUp } from '@phosphor-icons/react'
@@ -10,13 +11,23 @@ function capitalizeFirstLetter(str) {
 
 export function Comment({comment, onDeleteComment}){
 
+    const [applauseCount, setApplauseCount] = useState(comment.applauseCount);
+
     const commentDateFormatted = capitalizeFirstLetter(formatDistanceToNow(comment.createdAt, {locale: ptBR}));
     const commentDateHumanReadable = format(comment.createdAt, "dd 'de' MMMM 'às' HH:mm", {locale: ptBR});
     const commentDateTime = format(comment.createdAt, "dd-MM-yyyy HH:mm:ss", {locale: ptBR});
+    
+    const [isApplaused, setIsApplaused] = useState(false);
 
     function handleDeleteComment(event){
         onDeleteComment(comment);
     }
+
+    function handleApplause(){
+        setApplauseCount(applauseCount + 1);
+        setIsApplaused(true);
+    }
+
 
     return (
         <div className={styles.commentWrapper}>
@@ -36,10 +47,13 @@ export function Comment({comment, onDeleteComment}){
                     </div>
                 </div>
                 <footer>
-                    <button className={styles.applause}>
+                    <a 
+                    className={styles.applause}
+                    style={{ color: isApplaused ? "var(--green-light)" : "var(--gray5)" }}
+                    onClick={handleApplause}>
                         <ThumbsUp size={20} />
-                        <span>Aplaudir</span><span className={styles.applauseCount}>{comment.applauseCount}</span>
-                    </button>
+                        <span>Aplaudir</span><span className={styles.applauseCount}>{applauseCount}</span>
+                    </a>
                 </footer>
             </div>
         </div>

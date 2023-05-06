@@ -64,17 +64,12 @@
     font-size: 0.875rem;
     font-weight: bold;
     line-height: 0;
+    user-select: none;
 }
 
 .applause:hover {
     color: var(--gray7);
     cursor: pointer;
-}
-
-.applause:active,
-.applause:visited
-{
-    color: var(--green-light);
 }
 
 .applause > svg {
