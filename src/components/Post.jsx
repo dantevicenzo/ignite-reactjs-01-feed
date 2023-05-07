@@ -62,7 +62,6 @@ export function Post({author, content, createdAt, comments = [], userLoggedIn}){
     const formattedContentHTML = formatContentUrls(content);
     const sanitizedContentHTML = DOMPurify.sanitize(formattedContentHTML);
     const isTextareaEmpty = newCommentText.length == 0;
-    console.log(isTextareaEmpty);
 
     const publishedDateFormatted = `Publicado ${formatDistanceToNow(createdAt, {locale: ptBR, addSuffix: true})}`;
     const publishedDateHumanReadable = format(createdAt, "dd 'de' MMMM 'às' HH:mm", {locale: ptBR});
