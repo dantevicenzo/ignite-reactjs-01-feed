@@ -28,7 +28,7 @@ class ErrorBoundary extends Component {
         <div>
           <p>Something went wrong 😭</p>
 
-          {error.message && <span>Here's the error: {error.message}</span>}
+          {error.message && <span>Here's the error: {error}</span>}
         </div>
       );
     }
