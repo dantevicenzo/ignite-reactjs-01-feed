@@ -20,7 +20,7 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    const { hasError, error } = this.state;
+    const { hasError, error, errorInfo } = this.state;
 
     if (hasError) {
       // You can render any custom fallback UI
@@ -28,7 +28,9 @@ class ErrorBoundary extends Component {
         <div>
           <p>Something went wrong 😭</p>
 
-          {error.message && <span>Here's the error: {error}</span>}
+          {error.message && <span>Here's the error: {error.message}</span>}
+
+          {errorInfo && <span>Here's the error info: {errorInfo}</span>}
         </div>
       );
     }
