@@ -21,7 +21,7 @@ function App() {
           name: "Chris Jatta", 
           avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/0.jpg",
       },
-      createdAt: new Date('05-05-2023 18:00:00'),
+      createdAt: new Date('2023-05-05T18:00:00'),
       content: "Muito bom Dante, parabéns!! 👏👏",
       applauseCount: 3
     },
@@ -31,7 +31,7 @@ function App() {
           name: "Jed Alic", 
           avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/65.jpg",
       },
-      createdAt: new Date('05-05-2023 21:00:00'),
+      createdAt: new Date('2023-05-05T21:00:00'),
       content: "Adorei seu novo portifólio Dante!",
       applauseCount: 33
     },
@@ -41,7 +41,7 @@ function App() {
           name: "Zack Verkamp", 
           avatarUrl: "https://xsgames.co/randomusers/assets/avatars/male/76.jpg",
       },
-      createdAt: new Date('05-05-2023 24:00:00'),
+      createdAt: new Date('2023-05-06T00:00:00'),
       content: "💜💜",
       applauseCount: 9
     },
@@ -62,7 +62,7 @@ Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW
 👉 dante.design/doctorcare
       
 #novoprojeto #nlw #rocketseat`,
-      createdAt: new Date('05-05-2023 18:00:00'),
+      createdAt: new Date('2023-05-05T18:00:00'),
       comments: []
     },
     {
@@ -79,7 +79,7 @@ Finalmente finalizei meu novo site/portfólio. Foi um baita desafio criar todo o
 Acesse e deixe seu feedback 👉 dantevicenzo.design
       
 #uiux #userexperience`,
-      createdAt: new Date('05-05-2023 12:00:00'),
+      createdAt: new Date('2023-05-05T12:00:00'),
       comments: defaultComments
     }
   ]
