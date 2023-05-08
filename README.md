@@ -1,4 +1,5 @@
-# ignite-reactjs-01-feed
+# ReactJS Ignite Feed
 
-Figma: https://www.figma.com/community/file/1113573231685349036/Ignite-Feed
-Deploy: https://ignite-reactjs-01-feed.pages.dev
+## From Figma to Code
+### Figma: https://www.figma.com/community/file/1113573231685349036/Ignite-Feed
+### Deploy: https://ignite-reactjs-01-feed.pages.dev
